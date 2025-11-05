@@ -1,4 +1,5 @@
-/* Reset básico */
+
+    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
@@ -190,6 +191,7 @@
     }
 
     .contact-section input,
+    .contact-section select,
     .contact-section textarea {
       padding: 14px 18px;
       margin-bottom: 20px;
@@ -203,11 +205,16 @@
     }
 
     .contact-section input:focus,
+    .contact-section select:focus,
     .contact-section textarea:focus {
       outline: none;
       border-color: var(--durazno);
       box-shadow: 0 0 8px var(--durazno);
       background: #fff;
+    }
+
+    .contact-section select {
+      cursor: pointer;
     }
 
     .contact-section button {
@@ -271,12 +278,8 @@
     @media(max-width: 768px) {
       header {
         flex-direction: column;
-        align-content: center;
         padding: 15px 20px;
       }
-   .titulo {
-    display: none;
-  }
       nav {
         margin-top: 12px;
       }
@@ -303,10 +306,9 @@
     }
 
     @media(max-width: 400px) {
-     
-          .titulo {
-    display: none;
-  }
+      header h1 {
+        font-size: 1.3rem;
+      }
       .hero h2 {
         font-size: 1.7rem;
       }
@@ -318,3 +320,4 @@
         padding: 14px;
       }
     }
+  

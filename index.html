@@ -52,7 +52,15 @@
     <h3>Contactanos por WhatsApp</h3>
     <form onsubmit="redirectWhatsApp(event)">
       <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required aria-required="true" />
-
+ <select id="consulta" name="consulta" required aria-required="true" >
+        <option value="" disabled selected>Seleccioná el tipo de consulta</option>
+        <option value="Reparación de dispositivos móviles">Reparación de dispositivos móviles</option>
+        <option value="Desbloqueos">Desbloqueos</option>
+        <option value="Instalación de sistema operativo y software">Instalación de sistema operativo y software</option>
+        <option value="Diseño de tarjetas virtuales e invitaciones">Diseño de tarjetas virtuales e invitaciones</option>
+        <option value="Desarrollo de páginas web">Desarrollo de páginas web</option>
+        <option value="Otro">Otro</option>
+      </select>
       <textarea id="mensaje" name="mensaje" rows="4" placeholder="Tu mensaje" required aria-required="true"></textarea>
       <button type="submit">Enviar por WhatsApp</button>
     </form>
@@ -64,7 +72,7 @@
 
   <!-- Botón flotante WhatsApp -->
   <a
-    href="https://wa.me/54911XXXXXXXXX?text=Hola%20quiero%20más%20información%20sobre%20Code%20Art"
+    href="https://wa.me/5492216754168?text=Hola%20quiero%20más%20información%20sobre%20Code%20Art"
     target="_blank"
     id="whatsapp-float"
     aria-label="Abrir chat de WhatsApp"
@@ -80,10 +88,9 @@
     function redirectWhatsApp(event) {
       event.preventDefault();
       const nombre = document.getElementById('nombre').value.trim();
-      
+      const consulta = document.getElementById('consulta').value;
       const mensaje = document.getElementById('mensaje').value.trim();
-
-      const texto = `Hola, mi nombre es ${nombre}. ${mensaje}`;
+      const texto = `Hola, mi nombre es ${nombre}. Tengo una consulta sobre: ${consulta}. ${mensaje}`;
 
       // Cambiar el número 54911XXXXXXXXX por tu número real completo sin + ni espacios
       const numeroWhatsApp = "542216754168";
