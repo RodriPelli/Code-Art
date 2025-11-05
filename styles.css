@@ -271,8 +271,12 @@
     @media(max-width: 768px) {
       header {
         flex-direction: column;
+        align-content: center;
         padding: 15px 20px;
       }
+   .titulo {
+    display: none;
+  }
       nav {
         margin-top: 12px;
       }
@@ -299,9 +303,10 @@
     }
 
     @media(max-width: 400px) {
-      header h1 {
-        font-size: 1.3rem;
-      }
+     
+          .titulo {
+    display: none;
+  }
       .hero h2 {
         font-size: 1.7rem;
       }
